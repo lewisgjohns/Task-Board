@@ -15,3 +15,6 @@ body {
     cursor: grab;
   }
   
+  .draggable {
+    z-index: 1000; /* Ensure this value is higher than other elements in the same stacking context */
+}

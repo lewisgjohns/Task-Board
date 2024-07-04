@@ -45,18 +45,18 @@ function renderTaskList() {
     });
 
     // Make cards draggable
-  $(".draggable").draggable({
-    revert: true,
-    revertDuration: 0,
-    containment: ".row",
-    start: function(event, ui) {
-        $(this).addClass("dragging");
-        $(this).css("z-index", 1000); // Set a high z-index when dragging starts
-    },
-    stop: function(event, ui) {
-        $(this).removeClass("dragging");
-    }
-});
+    $(".draggable").draggable({
+        revert: true,
+        revertDuration: 0,
+        containment: ".row",
+        start: function(event, ui) {
+            $(this).addClass("dragging");
+        },
+        stop: function(event, ui) {
+            $(this).removeClass("dragging");
+        }
+    });
+}
 
 // Todo: create a function to handle adding a new task
 function handleAddTask(event) {
@@ -113,14 +113,14 @@ function handleDrop(event, ui) {
     let taskId = ui.draggable.attr("id").split("-")[1];
     let newStatus = $(event.target).closest(".lane").attr("id");
 
-    // Adjusting the code to handle the drop correctly
-    if (newStatus === undefined) {
-        newStatus = $(event.target).closest(".lane")[0].id; // Fallback for direct lane reference
-    }
-
+    // Update task status based on lane ID
     taskList.forEach(task => {
         if (task.id == taskId) {
-            task.status = newStatus;
+            if (newStatus === "to-do") { // Update this condition to match your actual ID
+                task.status = "todo"; // Update status to match your actual ID
+            } else {
+                task.status = newStatus;
+            }
         }
     });
 
