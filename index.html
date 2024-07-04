@@ -10,8 +10,12 @@
     integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
   <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" />
-
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
+    integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U=" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="./assets/css/style.css" />
+  
   <title>Task Board</title>
 </head>
 
@@ -42,6 +46,10 @@
                   <label for="taskDescription" class="form-label">Description</label>
                   <textarea class="form-control" id="taskDescription" name="taskDescription" rows="3"></textarea>
                 </div>
+              </div>
+              <div class="mb-3">
+                <label for="taskDueDate" class="form-label">Due Date</label>
+                <input type="text" class="form-control" id="taskDueDate" name="taskDueDate">
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>

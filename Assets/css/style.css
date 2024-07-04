@@ -16,5 +16,13 @@ body {
   }
   
   .draggable {
-    z-index: 1000; /* Ensure this value is higher than other elements in the same stacking context */
+    z-index: 1000; 
+}
+
+.due-soon {
+  background-color: yellow; /* Yellow background */
+}
+
+.overdue {
+  background-color: red; /* Red background */
 }
