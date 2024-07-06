@@ -2,7 +2,7 @@ body {
     font-family: 'Open Sans', sans-serif;
     font-size: 16px;
   }
-  
+
   .swim-lanes {
     min-height: 60vh;
   }
@@ -14,15 +14,16 @@ body {
   .task-card:hover {
     cursor: grab;
   }
-  
+
   .draggable {
     z-index: 1000; 
 }
 
+/* yellow background for overdue task */
 .due-soon {
-  background-color: yellow; /* Yellow background */
+  background-color: yellow; 
 }
-
+ /* red background for overdue task */
 .overdue {
-  background-color: red; /* Red background */
+  background-color: red; 
 }
